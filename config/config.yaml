@@ -1,0 +1,42 @@
+# RAG Document QA - Configuration
+# Override any value via env vars: RAG_<SECTION>__<KEY> (e.g., RAG_LLM__MODEL)
+
+embedding:
+  provider: "openai"                    # openai | huggingface
+  model: "text-embedding-3-small"       # OpenAI: text-embedding-3-small/large, HF: sentence-transformers/all-MiniLM-L6-v2
+  dimensions: 1536                      # 1536 for text-embedding-3-small, 3072 for large, 384 for MiniLM
+
+llm:
+  provider: "openai"                    # openai | bedrock
+  model: "gpt-4o"                       # OpenAI: gpt-4o, gpt-4o-mini | Bedrock: anthropic.claude-3-sonnet-20240229-v1:0
+  temperature: 0.0
+  max_tokens: 2048
+
+chunking:
+  strategy: "recursive"                 # fixed | recursive | semantic
+  chunk_size: 1000
+  overlap: 200
+
+vectorstore:
+  provider: "chroma"                    # chroma | pgvector
+  collection_name: "documents"
+  persist_directory: "./chroma_data"
+  pgvector_connection_string: "postgresql+psycopg2://user:password@localhost:5432/rag_db"
+
+retrieval:
+  top_k: 5
+  search_type: "mmr"                    # similarity | mmr | hybrid
+  mmr_lambda: 0.5                       # 0.0 = max diversity, 1.0 = max relevance
+  reranker_enabled: false
+  reranker_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "http://localhost:3000"
+    - "http://localhost:8000"
+
+logging:
+  level: "INFO"                         # DEBUG | INFO | WARNING | ERROR | CRITICAL
+  format: "json"                        # json | console
