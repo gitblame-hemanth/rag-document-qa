@@ -1,0 +1,37 @@
+[
+  {
+    "question": "What is the company's remote work policy?",
+    "ground_truth": "Employees may work remotely up to three days per week with manager approval. Full-time remote arrangements require VP-level approval and a signed remote work agreement.",
+    "context_keywords": ["remote", "work", "policy", "approval", "manager"]
+  },
+  {
+    "question": "How many vacation days do new employees receive?",
+    "ground_truth": "New employees receive 15 days of paid vacation per year during their first two years. After the second anniversary, vacation accrual increases to 20 days per year.",
+    "context_keywords": ["vacation", "days", "paid", "accrual", "employees"]
+  },
+  {
+    "question": "What is the process for submitting expense reports?",
+    "ground_truth": "Expense reports must be submitted within 30 days of the expenditure through the internal expense portal. Receipts are required for any expense over $25. Manager approval is needed for expenses under $500, while expenses over $500 require director approval.",
+    "context_keywords": ["expense", "reports", "receipts", "approval", "portal"]
+  },
+  {
+    "question": "What are the company's data security requirements for handling customer information?",
+    "ground_truth": "All customer data must be encrypted at rest and in transit using AES-256 encryption. Access to customer databases requires multi-factor authentication and is logged in the audit trail. Employees must complete annual data security training.",
+    "context_keywords": ["data", "security", "encryption", "customer", "authentication"]
+  },
+  {
+    "question": "How does the performance review process work?",
+    "ground_truth": "Performance reviews are conducted semi-annually in January and July. Employees complete a self-assessment, followed by a manager evaluation. Calibration sessions are held at the department level to ensure consistency. Final ratings are shared during one-on-one feedback meetings.",
+    "context_keywords": ["performance", "review", "assessment", "manager", "calibration"]
+  },
+  {
+    "question": "What benefits are available for professional development?",
+    "ground_truth": "The company provides an annual professional development budget of $2,500 per employee. This covers conference attendance, online courses, certifications, and book purchases. Employees must submit a development plan to their manager for pre-approval.",
+    "context_keywords": ["professional", "development", "budget", "courses", "certifications"]
+  },
+  {
+    "question": "What is the company's policy on intellectual property?",
+    "ground_truth": "All work products created during employment using company resources are the intellectual property of the company. Employees must disclose any pre-existing IP before starting projects. Patent applications must be reviewed by the legal department before filing.",
+    "context_keywords": ["intellectual", "property", "patent", "legal", "disclosure"]
+  }
+]
