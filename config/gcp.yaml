@@ -1,0 +1,8 @@
+llm:
+  provider: vertex
+  model: gemini-1.5-pro
+  project: YOUR_PROJECT_ID
+  location: us-central1
+embeddings:
+  provider: huggingface
+  model: all-MiniLM-L6-v2

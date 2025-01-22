@@ -1,0 +1,8 @@
+llm:
+  provider: azure
+  deployment_name: gpt-4-deployment
+  endpoint: https://YOUR_RESOURCE.openai.azure.com/
+embeddings:
+  provider: azure
+  deployment_name: embedding-deployment
+  endpoint: https://YOUR_RESOURCE.openai.azure.com/

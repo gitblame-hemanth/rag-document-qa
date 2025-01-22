@@ -1,0 +1,7 @@
+llm:
+  provider: bedrock
+  model: anthropic.claude-3-sonnet-20240229-v1:0
+  temperature: 0.1
+embeddings:
+  provider: bedrock
+  model: amazon.titan-embed-text-v2:0
